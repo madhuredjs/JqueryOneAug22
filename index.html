@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="toggleContainer">
+    <p id="someText">Hi Jquery</p>
+    <p id="someThingElse">Welcome</p>
+</div>
+
+
+    <p id="coolText">Jquery is cool</p>
+
+
+
+<a id="showText" href="#">Show Text</a>
+
+<a id="hideText" href="#">Hide Text</a>
+
+<a id="toggleText" href="#">Toggle Text</a>
+
+<script type="text/javascript" src="lib/jquery-1.11.1.js" >
+
+</script>
+
+<script type="text/javascript" >
+
+    //document ready ,
+    //$,jQuery
+
+
+//    $(document).ready(function(){
+
+  //  });
+
+
+    $(function (){
+
+
+        $('#hideText').click(function () { //click Event Handler
+            console.log('hide text is called ');
+            $('#toggleContainer').hide();
+            //$('#coolText').show();
+            $('a').css('color','red');
+
+        });
+
+        $('#showText').click(function(){
+            console.log('show text is called ');
+
+            $('#toggleContainer').show();
+            $('a').css('color','green');
+        });
+
+
+
+        $('#toggleText').click(function(){
+              $('#toggleContainer').slideToggle();
+              $('a').css('color','yellow');
+        });
+
+
+
+    });
+
+
+
+</script>
+
+
+
+</body>
+</html>
